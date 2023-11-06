@@ -7,7 +7,7 @@ export const ContactForm = ({submit}) => {
     <Formik
       initialValues = {{
         name: '',
-        tel: ''
+        number: ''
       }}
       onSubmit={(values, actions) => {
         values.id = nanoid();
@@ -16,7 +16,7 @@ export const ContactForm = ({submit}) => {
       }}>
       <Form>
         <Field id="name" name="name" placeholder="Name*" required />
-        <Field id="tel" name="tel" type="tel" placeholder="Your tel*" required />
+        <Field id="tel" name="number" type="tel" placeholder="Your tel*" required />
         <button type="submit">Send</button>
       </Form>
     </Formik>
